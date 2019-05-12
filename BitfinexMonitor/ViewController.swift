@@ -24,10 +24,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(UINib(nibName: "OrderTableViewCell", bundle:nil), forCellReuseIdentifier: "OrderTableViewCell")
         
         SocketEngine.shared.connect()
+        
+        tableView.isHidden = true
         
         SocketEngine.shared.newOrder { [weak self] (order) in
             self?.populateOrders(order)
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
         
         if let daily_change = ticker.daily_change_perc{
         dailyChangeLabel.textColor = daily_change.isLess(than: 0.0) ? Colors.UI.red : Colors.UI.green
-        dailyChangeLabel.text = "%" + String(format: "%.2f", daily_change)
+        dailyChangeLabel.text = String(format: "%.2f", daily_change) + "%"
         }
         
         if let volume = ticker.volume, let high = ticker.high, let low = ticker.low{
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
     }
     
     func populateOrders(_ order: OrderBookModel){
+        
         // Total amount available at that price level.
         // Positive values mean bid, negative values mean ask.
         if let amount = order.amount{
@@ -69,6 +71,7 @@ class ViewController: UIViewController {
                 buyOrders.insert(order, at: 0)
             }
             
+            tableView.isHidden = false
             tableView.reloadData()
             tableViewHeightConstraint.constant = tableView.contentSize.height
         }
