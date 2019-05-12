@@ -22,6 +22,8 @@
 		4592B2792288A3C500EE08FA /* BMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B2782288A3C500EE08FA /* BMView.swift */; };
 		4592B27B2288A80300EE08FA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B27A2288A80300EE08FA /* Colors.swift */; };
 		4592B27D2288A88300EE08FA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B27C2288A88300EE08FA /* UIColor+Extensions.swift */; };
+		4592B2812288B28E00EE08FA /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B27F2288B28E00EE08FA /* OrderTableViewCell.swift */; };
+		4592B2822288B28E00EE08FA /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4592B2802288B28E00EE08FA /* OrderTableViewCell.xib */; };
 		55C19B9B73163F061E6BD119 /* Pods_BitfinexMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85580CDDC056E6D9A226234E /* Pods_BitfinexMonitor.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		4592B2782288A3C500EE08FA /* BMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMView.swift; sourceTree = "<group>"; };
 		4592B27A2288A80300EE08FA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4592B27C2288A88300EE08FA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		4592B27F2288B28E00EE08FA /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		4592B2802288B28E00EE08FA /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		85580CDDC056E6D9A226234E /* Pods_BitfinexMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitfinexMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		994280538F8EE02BE43660E7 /* Pods-BitfinexMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitfinexMonitor.release.xcconfig"; path = "Target Support Files/Pods-BitfinexMonitor/Pods-BitfinexMonitor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +108,7 @@
 			children = (
 				4592B2462288539B00EE08FA /* AppDelegate.swift */,
 				4592B2482288539B00EE08FA /* ViewController.swift */,
+				4592B27E2288B25800EE08FA /* Views */,
 				4592B2662288581800EE08FA /* Networking */,
 				4592B26B22885AED00EE08FA /* Models */,
 				4592B2772288A37100EE08FA /* Subclasses */,
@@ -160,6 +165,15 @@
 				4592B2782288A3C500EE08FA /* BMView.swift */,
 			);
 			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		4592B27E2288B25800EE08FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4592B27F2288B28E00EE08FA /* OrderTableViewCell.swift */,
+				4592B2802288B28E00EE08FA /* OrderTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C33FB3C28B0E500B2E640403 /* Pods */ = {
@@ -264,6 +278,7 @@
 			files = (
 				4592B2512288539C00EE08FA /* LaunchScreen.storyboard in Resources */,
 				4592B24E2288539C00EE08FA /* Assets.xcassets in Resources */,
+				4592B2822288B28E00EE08FA /* OrderTableViewCell.xib in Resources */,
 				4592B24C2288539B00EE08FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +350,7 @@
 				4592B2492288539B00EE08FA /* ViewController.swift in Sources */,
 				4592B26D2288618200EE08FA /* SubscribeRequestModel.swift in Sources */,
 				4592B27422887D7300EE08FA /* SubscribeResponseModel.swift in Sources */,
+				4592B2812288B28E00EE08FA /* OrderTableViewCell.swift in Sources */,
 				4592B27222887C9C00EE08FA /* OrderBookModel.swift in Sources */,
 				4592B270228866D900EE08FA /* Codable+Extensions.swift in Sources */,
 				4592B27D2288A88300EE08FA /* UIColor+Extensions.swift in Sources */,

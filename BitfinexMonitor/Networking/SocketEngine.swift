@@ -21,8 +21,8 @@ class SocketEngine: NSObject {
     private var socket = WebSocket(url: URL(string: "wss://api-pub.bitfinex.com/ws/2")!)
     private var bookChanId: Int = -1
     private var tickerChanId: Int = -1
-    private var newOrderCallback: ((OrderBookModel?) -> ())?
-    private var newTickerCallback: ((TickerModel?) -> ())?
+    private var newOrderCallback: ((OrderBookModel) -> ())?
+    private var newTickerCallback: ((TickerModel) -> ())?
     
     override init() {
         super.init()
@@ -33,11 +33,11 @@ class SocketEngine: NSObject {
         socket.connect()
     }
     
-    func newOrder(result: @escaping ((OrderBookModel?) -> Void)){
+    func newOrder(result: @escaping ((OrderBookModel) -> Void)){
         newOrderCallback = result
     }
     
-    func newTicker(result: @escaping ((TickerModel?) -> Void)){
+    func newTicker(result: @escaping ((TickerModel) -> Void)){
         newTickerCallback = result
     }
     

@@ -12,6 +12,7 @@ struct SubscribeRequestModel: Codable {
     
     var event: Event = .subscribe
     var channel: Channel?
+    var freq: String = "F1"
     var pair: String = "btcusd"
     
     init(channel: Channel) {

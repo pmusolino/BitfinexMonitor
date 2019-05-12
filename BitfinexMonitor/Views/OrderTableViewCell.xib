@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderTableViewCell" id="KGk-i7-Jjw" customClass="OrderTableViewCell" customModule="BitfinexMonitor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7W-Au-Dtn">
+                        <rect key="frame" x="0.0" y="0.0" width="194.5" height="40.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="IZM-sE-DY0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOD-yd-m7l" userLabel="separator">
+                        <rect key="frame" x="202.5" y="12.5" width="1" height="16"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.34886023116438358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="IZP-U8-qvm"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5H-yn-x56">
+                        <rect key="frame" x="211.5" y="0.0" width="194.5" height="40.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="meM-DA-GSf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bOD-yd-m7l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="0T4-P7-J3t"/>
+                    <constraint firstItem="D7W-Au-Dtn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2bA-ok-2a1"/>
+                    <constraint firstAttribute="trailing" secondItem="l5H-yn-x56" secondAttribute="trailing" id="5Cw-fN-Vuv"/>
+                    <constraint firstItem="D7W-Au-Dtn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7fQ-cN-pMO"/>
+                    <constraint firstAttribute="bottom" secondItem="l5H-yn-x56" secondAttribute="bottom" id="A9d-8C-Ln2"/>
+                    <constraint firstItem="l5H-yn-x56" firstAttribute="leading" secondItem="bOD-yd-m7l" secondAttribute="trailing" constant="8" id="DHJ-BU-TKn"/>
+                    <constraint firstAttribute="bottom" secondItem="bOD-yd-m7l" secondAttribute="bottom" constant="12" id="KFO-rN-4E2"/>
+                    <constraint firstItem="l5H-yn-x56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NU3-te-ywy"/>
+                    <constraint firstItem="bOD-yd-m7l" firstAttribute="leading" secondItem="D7W-Au-Dtn" secondAttribute="trailing" constant="8" id="NWT-IM-7Rn"/>
+                    <constraint firstAttribute="bottom" secondItem="D7W-Au-Dtn" secondAttribute="bottom" id="hmq-91-5Wj"/>
+                    <constraint firstItem="bOD-yd-m7l" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="pIB-Z6-SUk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="l5H-yn-x56" id="4X8-D2-g6W"/>
+                <outlet property="priceLabel" destination="D7W-Au-Dtn" id="2zK-1M-QIw"/>
+            </connections>
+            <point key="canvasLocation" x="194.20289855072465" y="114.50892857142857"/>
+        </tableViewCell>
+    </objects>
+</document>
