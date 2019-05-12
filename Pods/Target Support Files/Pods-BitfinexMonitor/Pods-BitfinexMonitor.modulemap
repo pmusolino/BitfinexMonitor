@@ -1,0 +1,6 @@
+framework module Pods_BitfinexMonitor {
+  umbrella header "Pods-BitfinexMonitor-umbrella.h"
+
+  export *
+  module * { export * }
+}
