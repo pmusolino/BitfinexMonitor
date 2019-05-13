@@ -1,4 +1,4 @@
-#Bitfinex Monitor
+# Bitfinex Monitor
 The app display a live BTC/USD order book from the Bitfinex Websocket APIs.
 
 The table with the order book will be updated every 2 seconds.
