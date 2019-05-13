@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/pmusolino/BitfinexMonitor/blob/master/Resources/screen.png?raw=true" width=300 alt="Icon"/>
+</p>
+
 # Bitfinex Monitor
 The app display a live BTC/USD order book from the Bitfinex Websocket APIs.
 
