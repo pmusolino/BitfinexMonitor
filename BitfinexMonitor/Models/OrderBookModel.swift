@@ -18,14 +18,15 @@ struct OrderBookModel: Codable {
         if array.count == 2 && (array[1] is [Any]) == true{
             if let nestedArray = array[1] as? [Any]{
                 if nestedArray.count == 3{
-                    price = nestedArray[0] as? Double
-                    count = nestedArray[1] as? Int
-                    amount = nestedArray[2] as? Double
+                    if let priceA = nestedArray[0] as? Double, let countA = nestedArray[1] as? Int, let amountA = nestedArray[2] as? Double{
+                        price = priceA
+                        count = countA
+                        amount = amountA
+                        return
+                    }
                 }
             }
         }
-        else{
-            throw CodableErrors.InitError
-        }
+        throw CodableErrors.InitError
     }
 }

@@ -25,21 +25,22 @@ struct TickerModel: Codable {
         if array.count == 2 && (array[1] is [Any]) == true{
             if let nestedArray = array[1] as? [Any]{
                 if nestedArray.count == 10{
-                    bid = nestedArray[0] as? Double
-                    bid_size = nestedArray[1] as? Double
-                    ask = nestedArray[2] as? Double
-                    ask_size = nestedArray[3] as? Double
-                    daily_change = nestedArray[4] as? Double
-                    daily_change_perc = nestedArray[5] as? Double
-                    last_price = nestedArray[6] as? Double
-                    volume = nestedArray[7] as? Double
-                    high = nestedArray[8] as? Double
-                    low = nestedArray[9] as? Double
+                    if let bidA = nestedArray[0] as? Double, let bid_sizeA = nestedArray[1] as? Double, let askA = nestedArray[2] as? Double, let ask_sizeA = nestedArray[3] as? Double, let daily_changeA = nestedArray[4] as? Double, let daily_change_percA = nestedArray[5] as? Double, let last_priceA = nestedArray[6] as? Double, let volumeA = nestedArray[7] as? Double, let highA = nestedArray[8] as? Double, let lowA = nestedArray[9] as? Double{
+                        bid = bidA
+                        bid_size = bid_sizeA
+                        ask = askA
+                        ask_size = ask_sizeA
+                        daily_change = daily_changeA
+                        daily_change_perc = daily_change_percA
+                        last_price = last_priceA
+                        volume = volumeA
+                        high = highA
+                        low = lowA
+                        return
+                    }
                 }
             }
         }
-        else{
-            throw CodableErrors.InitError
-        }
+        throw CodableErrors.InitError
     }
 }
